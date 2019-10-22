@@ -6,8 +6,8 @@
   "scripts": {
     "audit": "npm audit --audit-level=critical --registry=https://registry.npmjs.org",
     "convert:csv": "sh tools/convert-csv.sh",
-    "lint": "eslint 'server.js' 'src/*.js'",
-    "lint:fix": "eslint --fix 'server.js' 'src/*.js'",
+    "lint": "eslint 'server.js' './*.js'",
+    "lint:fix": "eslint --fix 'server.js' './*.js'",
     "start": "node server.js",
     "test": "npm run lint && mocha test/**/*.js"
   },

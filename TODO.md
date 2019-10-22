@@ -13,10 +13,10 @@
 ## Maintenance
 - [ ] Add and configure ```semantic-release``` package to ease versioning
 - [ ] Tests
-    - [ ] Add test suite for `/src` directory
+    - [x] Add test suite for `/src` directory
     - [ ] Make a ci/cd for this
     - [ ] Run tests before allowing pushes
-    - [ ] Create contract tests with the twitter bot
+    - [x] Create contract tests with the twitter bot
 - [ ] Flesh out eslint settings
 
 ## Wishlist
