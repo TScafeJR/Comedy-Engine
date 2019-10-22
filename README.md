@@ -12,3 +12,4 @@ I'm kind of playing around with brain.js to see what type of things are possible
 If you come across this project and take interest or want to contribute, feel free to reach out to me.
 
 ## To Do
+[Todo Readme](./TODO.md)
