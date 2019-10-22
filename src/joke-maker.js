@@ -1,14 +1,19 @@
 const CronJob = require('cron').CronJob;
 const jokes = require('../data/json/shortjokes');
 
-const randomJoke = () => {
+const getRandomJoke = () => {
     const selectedJoke = jokes[Math.floor(Math.random()*jokes.length)];
     return selectedJoke.Joke;
 };
 
+const getSpecificJoke = index => {
+    index = Math.abs(index);
+    return jokes[index % jokes.length].Joke;
+};
+
 const jokeMaker = new CronJob({
     cronTime: '*/5 * * * *',
-    onTick: randomJoke,
+    onTick: getRandomJoke,
     onComplete: (msg) => {
         console.error(`Cron job to make the joke terminated: ${msg}`);
     },
@@ -18,6 +23,7 @@ const jokeMaker = new CronJob({
 
 module.exports = {
     jokeMaker,
-    randomJoke
+    getRandomJoke,
+    getSpecificJoke
 };
 

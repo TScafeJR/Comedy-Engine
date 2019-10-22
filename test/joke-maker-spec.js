@@ -16,9 +16,35 @@ describe('Joke Maker', () => {
         '../data/json/shortjokes': testJokes
     });
 
-    it('should return an array of jokes', () => {
-        const joke = jokeMakerModule.randomJoke();
-        expect(jokesArr.includes(joke)).to.be.true;
+    describe('randomJoke', () => {
+        it('should return a string', () => {
+            const joke = jokeMakerModule.getRandomJoke();
+            expect(joke).to.be.a('string');
+        });
+
+        it('should return a joke that is in the array of provided jokes', () => {
+            const joke = jokeMakerModule.getRandomJoke();
+            expect(jokesArr.includes(joke)).to.be.true;
+        });
     });
+
+    describe('specificJoke', () => {
+        it('should return a string', () => {
+            const joke = jokeMakerModule.getSpecificJoke(0);
+            expect(joke).to.be.a('string');
+        });
+
+        it('should return a joke that is in the array of provided jokes', () => {
+            const joke = jokeMakerModule.getSpecificJoke(0);
+            expect(jokesArr.includes(joke)).to.be.true;
+        });
+
+        it('should be able to return a joke when the index is out of bound', () => {
+            const jokesLength = testJokes.length;
+            const joke = jokeMakerModule.getSpecificJoke(Math.floor(jokesLength * Math.random()));
+            expect(joke).to.be.a('string');
+            expect(jokesArr.includes(joke)).to.be.true;
+        });
+    })
 });
 
