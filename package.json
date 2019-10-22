@@ -1,18 +1,30 @@
 {
-  "name": "comedy_engine",
+  "name": "Comedy_Engine",
   "version": "1.0.0",
   "description": "This is where we create jokes for the twitter bot.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "audit": "npm audit --audit-level=critical --registry=https://registry.npmjs.org",
-    "start": "node index.js",
+    "convert:csv": "sh tools/convert-csv.sh",
+    "lint": "eslint 'server.js' 'src/*.js'",
+    "lint:fix": "eslint --fix 'server.js' 'src/*.js'",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TScafeJR/Comedy-Engine"
+  },
   "dependencies": {
     "brain.js": "^2.0.0-alpha.9",
+    "cookie-parser": "^1.4.4",
     "cron": "^1.7.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "csvtojson": "^2.0.10",
     "eslint": "^6.5.1"
   }
 }
