@@ -9,7 +9,7 @@
 ## Features
 - [x] Grab a specific joke from joke file
 - [ ] Create persistent data sources
-- [ ] Create a start / setup script to automate set up for new contributors
+- [x] Create a start / setup script to automate set up for new contributors
 
 ## Maintenance
 - [ ] Add and configure ```semantic-release``` package to ease versioning
