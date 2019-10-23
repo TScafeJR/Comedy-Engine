@@ -5,12 +5,11 @@
   "main": "server.js",
   "scripts": {
     "audit": "npm audit --audit-level=critical --registry=https://registry.npmjs.org",
-    "bump:version": "node tools/js/bump-version.js; git add package.json",
     "convert:csv": "sh tools/shell/convert-csv.sh",
     "lint": "eslint './*.js' './**/*.js'",
     "lint:fix": "eslint --fix './*.js' 'tools/**/*.js' 'src/**/*.js' 'test/**/*.js'",
     "preversion": "npm test",
-    "postversion": "git add .",
+    "postversion": "git push",
     "start": "NODE_ENV=production node server.js",
     "start:dev": "DEBUG=express:* NODE_ENV=development nodemon server.js",
     "test": "npm run lint && npm run test:unit && npm run test:routes",

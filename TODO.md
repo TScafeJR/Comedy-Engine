@@ -13,7 +13,7 @@
 
 ## Maintenance
 - [x] Add and configure ```semver``` package to ease versioning
-- [ ] Remove native semver package updating
+- [x] Remove native semver package updating
 - [ ] Tests
     - [x] Add test suite for `/src` directory
     - [ ] Make a ci/cd for this
