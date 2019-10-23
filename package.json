@@ -46,6 +46,7 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "npm run bump:version && git add package.json",
       "pre-push": "npm run audit && npm run test"
     }
   }
