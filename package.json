@@ -8,7 +8,7 @@
     "convert:csv": "sh tools/shell/convert-csv.sh",
     "lint": "eslint './*.js' './**/*.js'",
     "lint:fix": "eslint --fix './*.js' 'tools/**/*.js' 'src/**/*.js' 'test/**/*.js'",
-    "preversion": "npm test",
+    "preversion": "npm run audit && npm run test",
     "postversion": "git add package.json; git commit --amend --no-edit; git push --no-verify",
     "start": "NODE_ENV=production node server.js",
     "start:dev": "DEBUG=express:* NODE_ENV=development nodemon server.js",
