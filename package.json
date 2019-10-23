@@ -1,11 +1,11 @@
 {
   "name": "Comedy_Engine",
-  "version": "1.2.1",
+  "version": "1.2.5",
   "description": "This is where we create jokes for the twitter bot.",
   "main": "server.js",
   "scripts": {
     "audit": "npm audit --audit-level=critical --registry=https://registry.npmjs.org",
-    "bump:version": "node tools/js/bump-version.js",
+    "bump:version": "node tools/js/bump-version.js; git add package.json",
     "convert:csv": "sh tools/shell/convert-csv.sh",
     "lint": "eslint 'server.js' './*.js'",
     "lint:fix": "eslint --fix 'server.js' './*.js'",
@@ -46,7 +46,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run bump:version; git add package.json",
       "pre-push": "npm run audit && npm run test"
     }
   }

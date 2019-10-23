@@ -33,7 +33,7 @@ rl.question('Bump type: \n', (bumpType) => {
     console.log(`New version is ${newVersion}`);
     packageObj.version = newVersion;
 
-    fs.writeFileSync('./package.json', JSON.stringify(packageObj));
+    fs.writeFileSync('./package.json', JSON.stringify(packageObj, null, 2));
 
     rl.close();
 });

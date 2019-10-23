@@ -19,6 +19,7 @@
     - [x] Run tests before allowing pushes
     - [x] Create contract tests with the twitter bot
 - [ ] Flesh out eslint settings
+- [ ] Automate Changelog
 
 ## Wishlist
 - [ ] Integrate some sentiment analysis
