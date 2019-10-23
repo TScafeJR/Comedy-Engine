@@ -11,7 +11,7 @@ describe('Joke Maker', () => {
     const cronStub = sinon.stub().returns('Some cron stub');
     const jokesArr = testJokes.map(x => x.Joke);
 
-    const jokeMakerModule = proxyquire('../src/joke-maker', {
+    const jokeMakerModule = proxyquire('../../src/joke-maker', {
         'cron': { CronJob: cronStub },
         '../data/json/shortjokes': testJokes
     });
