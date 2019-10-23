@@ -11,10 +11,12 @@ const getSpecificJoke = index => {
     return jokes[index % jokes.length].Joke;
 };
 
+const ex = a => { console.log(a);};
+
 const jokeMaker = new CronJob({
     cronTime: '*/5 * * * *',
     onTick: getRandomJoke,
-    onComplete: (msg) => {
+    onComplete: msg => {
         console.error(`Cron job to make the joke terminated: ${msg}`);
     },
     start: true,

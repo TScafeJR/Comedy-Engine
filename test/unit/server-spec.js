@@ -3,7 +3,7 @@ const sinon = require('sinon');
 const sinonChai = require('sinon-chai');
 const proxyquire = require('proxyquire').noCallThru();
 
-const {expect} = chai;
+const { expect } = chai;
 chai.use(sinonChai);
 
 describe('Server', () => {
@@ -15,7 +15,7 @@ describe('Server', () => {
             getRandomJoke: randomJokeStub
         },
         './src/routes/app': {
-            listen: (port) => { console.log(`test listening on some port ${port}`) }
+            listen: port => { console.log(`test listening on some port ${port}`); }
         }
     });
 

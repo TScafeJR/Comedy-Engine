@@ -15,15 +15,15 @@ const checkAcceptableType = bumpType => {
         'prerelease'
     ];
 
-    if (!acceptableBumpTypes.includes(bumpType.toLowerCase())){
+    if (!acceptableBumpTypes.includes(bumpType.toLowerCase()))
         throw TypeError(
             `You must select an acceptable bump type: ${acceptableBumpTypes}
              You selected "${bumpType.toLowerCase()}"`
-        )
-    };
+        );
+
 };
 
-rl.question('Bump type: \n', (bumpType) => {
+rl.question('Bump type: \n', bumpType => {
     checkAcceptableType(bumpType);
 
     const currentVersion = packageObj.version;

@@ -9,6 +9,8 @@
     "convert:csv": "sh tools/shell/convert-csv.sh",
     "lint": "eslint './*.js' './**/*.js'",
     "lint:fix": "eslint --fix './*.js' 'tools/**/*.js' 'src/**/*.js' 'test/**/*.js'",
+    "preversion": "npm test",
+    "postversion": "git add .",
     "start": "NODE_ENV=production node server.js",
     "start:dev": "DEBUG=express:* NODE_ENV=development nodemon server.js",
     "test": "npm run lint && npm run test:unit && npm run test:routes",
@@ -28,6 +30,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@tscafejr/eslint-config-scafejr": "^1.0.2",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "csvtojson": "^2.0.10",

@@ -9,7 +9,7 @@ chai.use(sinonChai);
 chai.use(chaiHttp);
 
 
-describe("App", () => {
+describe('App', () => {
     const spyExpressGet = sinon.spy();
     const stubExpressUse = sinon.spy();
     const cookieParserStub = sinon.stub().returns('some-cookies');
@@ -50,42 +50,42 @@ describe("App", () => {
 
     it('should call use with /joke, and jokeRoutes the second time it is evoked', () => {
         expect(stubExpressUse.getCall(1)).to.have.been.calledWith('/joke', fakeJokeRoutes);
-    })
+    });
 
     it('should call use with /, the third time it is evoked', () => {
         expect(stubExpressUse.getCall(2).args[0]).to.eql('/');
-    })
+    });
 });
 
-describe("Routes", () => {
+describe('Routes', () => {
     const app = require('../../src/routes/app');
 
-    describe("Error Routes", () => {
-        it('returns an error for an undefined url', (done) => {
-            chai.request(app)
-                .get('/some/random/ass/route')
-                .end((err, res) => {
+    describe('Error Routes', () => {
+        it('returns an error for an undefined url', done => {
+            chai.request(app).
+                get('/some/random/ass/route').
+                end((err, res) => {
                     expect(res).to.have.status(404);
                     expect(res.text).to.include('this page does not exist');
                     done();
-                })
-        })
-    })
+                });
+        });
+    });
 
-    describe("Joke Routes", () => {
-        it('is able to hit the random route', (done) => {
-            chai.request(app)
-                .get('/joke/random')
-                .end((err, res) => {
+    describe('Joke Routes', () => {
+        it('is able to hit the random route', done => {
+            chai.request(app).
+                get('/joke/random').
+                end((err, res) => {
                     expect(res).to.have.status(200);
                     done();
                 });
         });
 
-        it('is able to hit the specific route', (done) => {
-            chai.request(app)
-                .get('/joke/specific/3')
-                .end((err, res) => {
+        it('is able to hit the specific route', done => {
+            chai.request(app).
+                get('/joke/specific/3').
+                end((err, res) => {
                     expect(res).to.have.status(200);
                     done();
                 });

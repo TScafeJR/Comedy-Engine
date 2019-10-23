@@ -45,6 +45,6 @@ describe('Joke Maker', () => {
             expect(joke).to.be.a('string');
             expect(jokesArr.includes(joke)).to.be.true;
         });
-    })
+    });
 });
 

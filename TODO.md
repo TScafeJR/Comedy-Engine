@@ -13,12 +13,14 @@
 
 ## Maintenance
 - [x] Add and configure ```semver``` package to ease versioning
+- [ ] Remove native semver package updating
 - [ ] Tests
     - [x] Add test suite for `/src` directory
     - [ ] Make a ci/cd for this
     - [x] Run tests before allowing pushes
     - [x] Create contract tests with the twitter bot
-- [ ] Flesh out eslint settings
+- [x] Flesh out eslint settings
+    - [x] Share eslint configurations so that I can use them on other projects
 - [ ] Automate Changelog
 
 ## Wishlist
