@@ -12,7 +12,7 @@
 - [x] Create a start / setup script to automate set up for new contributors
 
 ## Maintenance
-- [ ] Add and configure ```semantic-release``` package to ease versioning
+- [x] Add and configure ```semver``` package to ease versioning
 - [ ] Tests
     - [x] Add test suite for `/src` directory
     - [ ] Make a ci/cd for this
