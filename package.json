@@ -9,7 +9,7 @@
     "lint": "eslint './*.js' './**/*.js'",
     "lint:fix": "eslint --fix './*.js' 'tools/**/*.js' 'src/**/*.js' 'test/**/*.js'",
     "preversion": "npm test",
-    "postversion": "git push",
+    "postversion": "git add package.json; git commit --amend --no-edit; git push",
     "start": "NODE_ENV=production node server.js",
     "start:dev": "DEBUG=express:* NODE_ENV=development nodemon server.js",
     "test": "npm run lint && npm run test:unit && npm run test:routes",
