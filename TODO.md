@@ -4,6 +4,7 @@
 
 - [Features](#features)
 - [Maintenance](#maintenance)
+- [Wishlist](#wishlist)
 - [Miscellaneous](#miscellaneous)
 
 ## Features
