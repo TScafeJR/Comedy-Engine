@@ -1,6 +1,6 @@
 {
   "name": "Comedy_Engine",
-  "version": "1.8.4",
+  "version": "1.8.5",
   "description": "This is where we create jokes for the twitter bot.",
   "main": "server.js",
   "scripts": {
