@@ -1,10 +1,7 @@
 const Sentiment = require('sentiment');
+const { sanitizeStr } = require('../helpers/helpers');
 
 const sentimentInstance = new Sentiment();
-
-const sanitizeStr = str => {
-    return str.replace(/[^\w\s.!?]/g, '');
-};
 
 const analyzeJokes = jokesArr => {
     jokesArr.forEach(joke => {
@@ -31,7 +28,6 @@ const getWords = jokesArr => {
 };
 
 module.exports = {
-    sanitizeStr,
     analyzeJokes,
     getWords
 };

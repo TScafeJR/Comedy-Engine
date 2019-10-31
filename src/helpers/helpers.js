@@ -7,7 +7,13 @@ const getMaxAndMin = inputData => {
     };
 };
 
+const sanitizeStr = str => {
+    return str.replace(/[^\w\s.!?]/g, '');
+};
+
+
 module.exports = {
     normalize,
-    getMaxAndMin
+    getMaxAndMin,
+    sanitizeStr
 };

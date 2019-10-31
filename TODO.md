@@ -9,8 +9,9 @@
 
 ## Features
 - [x] Grab a specific joke from joke file
-- [ ] Create persistent data sources
+- [x] Create persistent data sources
 - [x] Create a start / setup script to automate set up for new contributors
+- [x] Create persistent / loadable bots
 
 ## Maintenance
 - [x] Add and configure ```semver``` package to ease versioning
@@ -30,6 +31,13 @@
     - [ ] Apply sarcastic sentiment
     - [ ] Apply insights
 - [ ] Make routes that return different types of jokes
+    - [ ] Make Manichean Bot route that can respond to input
 - [ ] Scrape websites and social media to have new jokes or break this feature out to a new service.
 
 ## Miscellaneous
+- [ ] Write generate data script
+- [x] Write train bots script
+    - [ ] Write js train bots script
+
+### Bots
+- [ ] Make Manichean Bot a class

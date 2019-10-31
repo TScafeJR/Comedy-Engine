@@ -3,7 +3,7 @@ const fs = require('fs');
 const Sentiment = require('sentiment');
 const { manicheanBot } = require('../helpers/load-bots');
 const jokes = require('../../data/json/sentiment-jokes');
-const { normalize, getMaxAndMin } = require('../helpers/helpers');
+const { normalize, getMaxAndMin, sanitizeStr } = require('../helpers/helpers');
 
 const trainBot = () => {
     const config = {
@@ -41,10 +41,6 @@ const respondToJoke = joke => {
     const { max, min } = getMaxAndMin(jokesScoresArr);
 
     const sentimentInstance = new Sentiment();
-
-    const sanitizeStr = str => {
-        return str.replace(/[^\w\s.!?]/g, '');
-    };
 
     const jokeScore = sentimentInstance.analyze(sanitizeStr(joke)).score;
     const normalizedScore = normalize(jokeScore, min, max);
