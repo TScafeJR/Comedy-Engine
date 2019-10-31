@@ -11,8 +11,6 @@ const getSpecificJoke = index => {
     return jokes[index % jokes.length].Joke;
 };
 
-const ex = a => { console.log(a);};
-
 const jokeMaker = new CronJob({
     cronTime: '*/5 * * * *',
     onTick: getRandomJoke,

@@ -31,6 +31,7 @@ const getWords = jokesArr => {
 };
 
 module.exports = {
+    sanitizeStr,
     analyzeJokes,
     getWords
 };

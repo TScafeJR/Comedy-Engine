@@ -9,10 +9,9 @@ const config = {
     iterations: 30000,
     errorThresh: 0.005,
     log: true,
-    logPeriod: 5,
-    layers: [20, 20],
-    hiddenLayers: [8, 4, 2, 1],
-    learningRate: 0.3
+    logPeriod: 10,
+    layers: [4],
+    hiddenLayers: [4, 2]
 };
 
 const trainingData = [];
@@ -33,7 +32,7 @@ Object.keys(dataCopy).forEach(word => {
 const network = new brain.recurrent.LSTM();
 const bot = network.train(trainingData, config);
 
-fs.writeFileSync('bots/sentiment-bot.json', bot);
+fs.writeFileSync(`bots/sentiment-bot-${process.env.PORT}.json`, bot);
 
 module.exports = {
   wordBot: network

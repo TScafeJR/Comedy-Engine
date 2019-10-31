@@ -1,13 +1,16 @@
 const { getRandomJoke } = require('./src/joke-maker');
+const { respondToJoke } = require('./src/bots/manichean-bot');
 
 const port = process.env.PORT || '3000';
 const app = require('./src/routes/app');
-let wordBot;
 
 app.listen(port, () => {
     console.log('Starting the joke engine 🎭');
     console.log(`The joke engine is listening on port ${port}!`);
-    console.log(getRandomJoke());
-    console.log('Training bots');
-    wordBot = require('./src/bots/sentiment-bot');
 });
+
+const firstJoke = getRandomJoke();
+console.log(firstJoke);
+console.log('Training bots');
+console.log('Manichean Bot is responding to the first joke');
+console.log(respondToJoke(firstJoke));
