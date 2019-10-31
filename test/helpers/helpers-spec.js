@@ -1,5 +1,5 @@
 const chai = require('chai');
-const { normalize, getMaxAndMin } = require('../../src/helpers/helpers');
+const { normalize, getMaxAndMin, sanitizeStr } = require('../../src/helpers/helpers');
 
 const { expect } = chai;
 
@@ -28,6 +28,24 @@ describe('Helpers', () => {
             const { max, min } = getMaxAndMin(inputData);
             expect(min).to.eql(-3);
             expect(max).to.eql(908);
+        });
+    });
+
+    describe('sanitizeStr', () => {
+        it('filters out non-word characters', () => {
+            const inputStr = 'A bad string: 😈';
+            const expectedStr = 'A bad string';
+            const filteredStr = sanitizeStr(inputStr);
+
+            expect(filteredStr).to.eql(expectedStr);
+        });
+
+        it('trims empty space off the end and the beginning of the string', () => {
+            const inputStr = ' A couple of extra spaces ';
+            const expectedStr = 'A couple of extra spaces';
+            const filteredStr = sanitizeStr(inputStr);
+
+            expect(filteredStr).to.eql(expectedStr);
         });
     });
 });

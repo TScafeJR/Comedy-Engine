@@ -33,3 +33,7 @@ const trainManicheanBot = () => {
 };
 
 trainManicheanBot();
+
+module.exports = {
+    trainManicheanBot
+};

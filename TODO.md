@@ -32,7 +32,7 @@
     - [ ] Apply sarcastic sentiment
     - [ ] Apply insights
 - [ ] Make routes that return different types of jokes
-    - [ ] Make Manichean Bot route that can respond to input
+    - [x] Make Manichean Bot route that can respond to input
 - [ ] Scrape websites and social media to have new jokes or break this feature out to a new service.
 
 ## Miscellaneous

@@ -8,9 +8,8 @@ const getMaxAndMin = inputData => {
 };
 
 const sanitizeStr = str => {
-    return str.replace(/[^\w\s.!?]/g, '');
+    return str.replace(/[^\w\s.!?]/g, '').trim();
 };
-
 
 module.exports = {
     normalize,
