@@ -12,7 +12,7 @@
     "lint": "eslint './*.js' './**/*.js'",
     "lint:fix": "eslint --fix './*.js' 'tools/**/*.js' 'src/**/*.js' 'test/**/*.js'",
     "preversion": "npm run audit && npm run test",
-    "postinstall": "yes | unzip data/json.zip -d data",
+    "postinstall": "yes | unzip data/json.zip",
     "postversion": "npm run handle-package; git commit --amend --no-edit; git push --no-verify",
     "setup": "sh tools/shell/setup.sh",
     "start": "NODE_ENV=production node server.js",
