@@ -35,9 +35,10 @@
 - [ ] Scrape websites and social media to have new jokes or break this feature out to a new service.
 
 ## Miscellaneous
-- [ ] Write generate data script
+- [x] Write generate data script
 - [x] Write train bots script
-    - [ ] Write js train bots script
+    - [x] Write js train bots script
+- [ ] Write tests for all uncovered js code in src
 
 ### Bots
-- [ ] Make Manichean Bot a class
+- [x] Make Manichean Bot a class
