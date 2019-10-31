@@ -6,6 +6,7 @@
 - [Maintenance](#maintenance)
 - [Wishlist](#wishlist)
 - [Miscellaneous](#miscellaneous)
+    - [Bots](#bots)
 
 ## Features
 - [x] Grab a specific joke from joke file

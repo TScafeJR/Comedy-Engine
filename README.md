@@ -2,6 +2,9 @@
 
 ## Outline
 - [Summary](#summary)
+- [Setup](#setup)
+    - [Generate Data](#generate-data)
+    - [Training Bots](#training-bots)
 - [Todo](#to-do)
 
 ## Summary
