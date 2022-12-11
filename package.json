@@ -33,7 +33,7 @@
     "brain.js": "^2.0.0-alpha.9",
     "cookie-parser": "^1.4.4",
     "cron": "^1.7.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "sentiment": "^5.0.2"
   },
   "devDependencies": {
